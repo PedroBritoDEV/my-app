@@ -6,12 +6,18 @@ const statusBarHeight = Constants.statusBarHeight;
 
 export default function Index() {
   return (
-    <ScrollView style={{ flex: 1 }} className="bg-gray-300 px-4 pt-4">
-      <View className="bg-white p-4 rounded-3xl shadow-lg">
-        
-        <BaseMetas icon="book" metaTittle="ler livro 3" currentDuration={39} totalDuration={30}/>
+   <ScrollView style={{ flex: 1 }}  
+      contentContainerStyle={{
+        paddingTop: statusBarHeight + 12,
+        paddingHorizontal: 12,
+        paddingBottom: 12,
+        backgroundColor: "#b3b3b3",
+        height: "100%",
+      }}
+    >
+      <View className="p-4 bg-white rounded-3xl shadow-lg min-h-[200px]">
+        <BaseMetas icon="book" metaTittle="ler livro 3" totalDuration={100} />
       </View>
-
     </ScrollView>
   );
 }
